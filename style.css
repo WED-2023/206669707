@@ -37,3 +37,112 @@ html {
 body {
     padding-top: 50px; /* Adjust based on the height of your menu */
 }
+
+#about {
+    background-color: #f9f9f9; /* Light gray background color */
+    padding: 20px; /* Add padding for spacing */
+}
+
+#about h2 {
+    color: #333; /* Dark text color for the heading */
+    font-size: 24px; /* Increase font size for better readability */
+    margin-bottom: 10px; /* Add bottom margin for spacing between heading and paragraphs */
+}
+
+.about-content {
+    overflow: hidden; /* Clear float to contain the floated image */
+}
+
+.about-content img {
+    float: left; /* Float image to the left */
+    margin-right: 20px; /* Add right margin for spacing between image and text */
+    max-width: 150px; /* Set maximum width for the image */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+.text-content {
+    overflow: hidden; /* Clear float to contain the floated image */
+}
+
+.text-content p {
+    color: #666; /* Medium gray text color for paragraphs */
+    font-size: 16px; /* Regular font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 15px; /* Add bottom margin for spacing between paragraphs */
+}
+#photo-album {
+    background-color: #f9f9f9; /* Light gray background color */
+    padding: 20px; /* Add padding for spacing */
+}
+
+#photo-album h2 {
+    color: #333; /* Dark text color for the heading */
+    font-size: 24px; /* Increase font size for better readability */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.photo-gallery {
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.slide {
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-nav label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #aaa;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-nav label:hover {
+    background-color: #666;
+}
+
+/* Hide radio buttons */
+.slide-radio {
+    display: none;
+}
+
+/* Hide navigation labels when radio buttons are checked */
+.slide-radio:checked + .slides .slide:nth-of-type(1) ~ .slider-nav label:nth-of-type(1),
+.slide-radio:checked + .slides .slide:nth-of-type(2) ~ .slider-nav label:nth-of-type(2),
+.slide-radio:checked + .slides .slide:nth-of-type(3) ~ .slider-nav label:nth-of-type(3) {
+    display: none;
+}
+
+/* Show navigation labels when radio buttons are unchecked */
+.slide-radio:not(:checked) + .slides .slide:nth-of-type(1) ~ .slider-nav label:nth-of-type(1),
+.slide-radio:not(:checked) + .slides .slide:nth-of-type(2) ~ .slider-nav label:nth-of-type(2),
+.slide-radio:not(:checked) + .slides .slide:nth-of-type(3) ~ .slider-nav label:nth-of-type(3) {
+    display: inline-block;
+}
+.slide img {
+    max-width: 60%; /* Set maximum width for the images to 50% of their original size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
