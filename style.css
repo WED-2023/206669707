@@ -1,7 +1,39 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+html {
+    scroll-behavior: smooth;
+}
+#menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff; /* Change the background as needed */
+    z-index: 1000; /* Keeps the menu on top of other content */
+    border-bottom: 1px solid #ccc; /* Adds a line under the menu for visual separation */
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#menu li {
+    float: left;
+}
+
+#menu li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Add styles to change the appearance on hover */
+#menu li a:hover {
+    background-color: #ddd;
+}
+
+/* Style to add space under the menu for content */
+body {
+    padding-top: 50px; /* Adjust based on the height of your menu */
 }
