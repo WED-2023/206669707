@@ -39,12 +39,12 @@ body {
 }
 
 #about {
-    background-color: #f9f9f9; /* Light gray background color */
+    background-color: #c6faf1; /* Light gray background color */
     padding: 20px; /* Add padding for spacing */
 }
 
 #about h2 {
-    color: #333; /* Dark text color for the heading */
+    color: #333333; /* Dark text color for the heading */
     font-size: 24px; /* Increase font size for better readability */
     margin-bottom: 10px; /* Add bottom margin for spacing between heading and paragraphs */
 }
@@ -65,84 +65,168 @@ body {
 }
 
 .text-content p {
-    color: #666; /* Medium gray text color for paragraphs */
+    color: #474343; /* Medium gray text color for paragraphs */
     font-size: 16px; /* Regular font size */
     line-height: 1.6; /* Increase line height for better readability */
     margin-bottom: 15px; /* Add bottom margin for spacing between paragraphs */
 }
 #photo-album {
-    background-color: #f9f9f9; /* Light gray background color */
+    background-color: #c6faf1; /* Light gray background color */
     padding: 20px; /* Add padding for spacing */
 }
 
 #photo-album h2 {
-    color: #333; /* Dark text color for the heading */
+    color: #333333; /* Dark text color for the heading */
     font-size: 24px; /* Increase font size for better readability */
     margin-bottom: 20px; /* Add bottom margin for spacing */
 }
 
 .photo-gallery {
+    width: 100%;
+    overflow-x: auto;
     position: relative;
 }
 
 .slides {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    width: 400%;
 }
 
 .slide {
-    scroll-snap-align: start;
-    flex: 0 0 100%;
+    width: 25%;
+    position: relative; /* Make sure position is set to relative */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide img {
     max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    max-height: 400px;
+    display: block;
+}
+
+.slide-radio {
+    display: none;
+    position: inherit; /* Position inside the slide */
+    opacity: 0; /* Make radios invisible but functional */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Above the image, but below the label */
+}
+
+.nav-dot {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.nav-dot:hover {
+    background: #777;
 }
 
 .slider-nav {
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
 }
 
-.slider-nav label {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-color: #aaa;
-    border-radius: 50%;
-    margin: 0 5px;
+#slide1:checked ~ .slides { transform: translateX(0%); }
+#slide2:checked ~ .slides { transform: translateX(-25%); }
+#slide3:checked ~ .slides { transform: translateX(-50%); }
+#slide4:checked ~ .slides { transform: translateX(-75%); }
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="email"], form textarea, form select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4caf8e;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.slider-nav label:hover {
-    background-color: #666;
+form button:hover {
+    background-color: #296b55;
+}
+nav#menu {
+    background-color: #003366; /* Dark blue */
+    padding: 10px 0;
+    text-align: center;
 }
 
-/* Hide radio buttons */
-.slide-radio {
-    display: none;
+nav#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* Hide navigation labels when radio buttons are checked */
-.slide-radio:checked + .slides .slide:nth-of-type(1) ~ .slider-nav label:nth-of-type(1),
-.slide-radio:checked + .slides .slide:nth-of-type(2) ~ .slider-nav label:nth-of-type(2),
-.slide-radio:checked + .slides .slide:nth-of-type(3) ~ .slider-nav label:nth-of-type(3) {
-    display: none;
+nav#menu li {
+    display: inline;
+    margin-right: 20px;
 }
 
-/* Show navigation labels when radio buttons are unchecked */
-.slide-radio:not(:checked) + .slides .slide:nth-of-type(1) ~ .slider-nav label:nth-of-type(1),
-.slide-radio:not(:checked) + .slides .slide:nth-of-type(2) ~ .slider-nav label:nth-of-type(2),
-.slide-radio:not(:checked) + .slides .slide:nth-of-type(3) ~ .slider-nav label:nth-of-type(3) {
-    display: inline-block;
+nav#menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
-.slide img {
-    max-width: 60%; /* Set maximum width for the images to 50% of their original size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px;
+.section h2 {
+    background-color: #46ccc5; /* Lighter blue */
+    color: #333333;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.section h2::before, .section h2::after {
+    content: '------------';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+}
+
+.section h2::before {
+    right: 100%;
+}
+
+.section h2::after {
+    left: 100%;
+}
+.section {
+    background-color: #c6faf1; /* Dark green */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
 }
