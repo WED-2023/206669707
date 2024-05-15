@@ -79,9 +79,13 @@
       </div>
   </section>
   
-    <section id="like" class="section">give me a like</section>
+    <section id="like" class="section">like on facebook</section>
     <div class="fb-like" data-href="https://www.facebook.com/meir.ariel?mibextid=kFxxJD" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
-    
+    <script>
+        document.getElementById('like').addEventListener('click', function() {
+            window.open('https://www.facebook.com/meir.ariel?mibextid=kFxxJD', '_blank');
+        });
+    </script>
     <section id="qrcoder" class="section">scan me</section>
     
     <section id="qa" class="section">
@@ -119,8 +123,8 @@
                 <ul>
                     <li><strong>Web1:</strong> דפי אינטרנט סטטיים עם מידע שנכתב על ידי מומחים או ארגונים. הדפים אינם מעודכנים לעיתים קרובות והמידע הוא חד צדדי.</li>
                     <li><strong>Web2:</strong> תוצאות חיפוש כוללות בלוגים, פורומים, אתרי חדשות ומדיה חברתית. משתמשים יכולים לקרוא מאמרים, תגובות ודעות של אנשים אחרים. המידע הוא רב צדדי ודינמי.</li>
-                    <li><strong>Web3:</strong> חיפוש מתבצע באפליקציות מבוזרות (dApps) שמאגדות מידע ממקורות שונים בבלוקצ'יין. התוכן מאומת ובלתי ניתן לשינוי, ומשתמשים יכולים להשתתף ולתרום מידע ולקבל תגמולים בצורת קריפטו. </li>
-                    <li> בנוסף, בweb3 ניתן לאחזר גם דפים קשורים סמנטית, כמו שמות של תרופות, השלכות של תופעות לוואי וכו'..</li>
+                    <li><strong>Web3:</strong> חיפוש מתבצע באפליקציות מבוזרות (dApps) שמאגדות מידע ממקורות שונים בבלוקצ'יין. התוכן מאומת ובלתי ניתן לשינוי, ומשתמשים יכולים להשתתף ולתרום מידע ולקבל תגמולים בצורת קריפטו. 
+                    בנוסף ניתן לאחזר תוצאות קשורות סמנטית, למשל מידע על תרופות או השלכות של תופעות הלוואי. </li>
                 </ul>
             </li>
         </ol>
