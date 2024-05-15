@@ -236,3 +236,20 @@ nav#menu a {
     height: auto;    /* Maintains aspect ratio */
     margin: 10px auto; /* Centers the image and gives some space from the headline */
 }
+.right-text {
+    text-align: right;
+    direction: rtl; /* Right-to-left direction for Hebrew text */
+}
+
+.right-text ul, .right-text ol {
+    padding-right: 20px; /* Adds right padding to lists */
+}
+
+.right-text li {
+    margin-bottom: 5px; /* Adds space between list items */
+}
+
+.right-text ul ul, .right-text ol ol {
+    margin-right: 20px; /* Indents sublists */
+}
+

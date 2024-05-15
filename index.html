@@ -79,20 +79,23 @@
       </div>
   </section>
   
-    <section id="like" class="section">like on facebook</section>
-    <div class="fb-like" data-href="https://www.facebook.com/meir.ariel?mibextid=kFxxJD" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
-    <script>
-        document.getElementById('like').addEventListener('click', function() {
+  <section id="like" class="section">
+    <h2 id="like-header">Like on Facebook</h2>
+    <div class="fb-like" data-href="https://www.facebook.com/meir.ariel?mibextid=kFxxJD" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+    </section>
+    <!-- <script>
+        document.getElementById('like-header').addEventListener('click', function() {
             window.open('https://www.facebook.com/meir.ariel?mibextid=kFxxJD', '_blank');
         });
-    </script>
-    <section id="qrcoder" class="section">scan me</section>
+    </script> -->
+
+    <!-- <section id="qrcoder" class="section">scan me</section> -->
     <section id="qrcoder" class="section">
         <h2>Scan Me</h2>
         <img src="images/qrcode_wed-2023.github.io.png" alt="QR Code" class="qr-image">
     </section>
     
-    <section id="qa" class="section" style="text-align: right;">
+    <section id="qa"  class="section right-text">
         <h2>Q&A</h2>
         <h3>על סמך העקרונות שנלמדו בכיתה ענו על השאלות הבאות:</h3>
         <ol>
@@ -134,24 +137,30 @@
         </ol>
     </section>
 
-    <section id="contact" class="section">contact me</section>
-    <form onsubmit="sendEmail(event)">
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form onsubmit="sendEmail(event)">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" required></textarea>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
 
-        <label for="emoji">Choose an emoji for your message:</label>
-        <select id="emoji" name="emoji">
-            <option value="smile">😊 Smile</option>
-            <option value="heart">❤️ Heart</option>
-            <option value="thumbs-up">👍 Thumbs Up</option>
-        </select>
+            <label for="emoji">Choose an emoji for your message:</label>
+            <select id="emoji" name="emoji">
+                <option value="smile">😊 Smile</option>
+                <option value="heart">❤️ Heart</option>
+                <option value="thumbs-up">👍 Thumbs Up</option>
+            </select>
 
-        <button type="submit">Send</button>
-    </form>
-
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <script>
+        document.getElementById('like-header').addEventListener('click', function() {
+            window.open('https://www.facebook.com/meir.ariel?mibextid=kFxxJD', '_blank');
+        });
+    </script>
     <script>
         function sendEmail(event) {
             event.preventDefault();
